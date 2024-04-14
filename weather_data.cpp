@@ -1,4 +1,4 @@
-#include "WeatherData.h"
+#include "weather_data.h"
 
 WeatherData::WeatherData(const std::string& city) : city(city) {}
 

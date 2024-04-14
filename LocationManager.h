@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "Location.h"
+#include "location.h"
 
 class LocationManager {
 public:
