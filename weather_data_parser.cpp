@@ -7,13 +7,13 @@
 using json = nlohmann::json;
 
 int main() {
-    // Sample JSON response string
+
     std::string jsonStr = R"(
         {
             "current": {
-                "time": "2022-01-01T15:00",
+                "time": "2022-01-01T15:00"
                 "temperature_2m": 2.4,
-                "wind_speed_10m": 11.9
+                "wind_speed_10m": 11.9,
             },
             "hourly": {
                 "time": ["2022-07-01T00:00", "2022-07-01T01:00"],

@@ -1,4 +1,4 @@
-#include "historical_weather_data.h"
+#include "historical_waether_data.h"
 
 HistoricalWeatherData::HistoricalWeatherData(const std::string& city, int year, int month, int day)
         : city(city), year(year), month(month), day(day) {}

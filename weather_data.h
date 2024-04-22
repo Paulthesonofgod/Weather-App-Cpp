@@ -1,16 +1,22 @@
 #pragma once
 #include <string>
-#include <unordered_map> // For storing variables
 
 class WeatherData {
 public:
-    WeatherData(const std::string& city);
+    // Constructor
+    WeatherData(const std::string& city) : city(city), temperature(0.0), windSpeed(0.0) {}
 
-    const std::string& getCity() const;
-    double getVariable(const std::string& variableName) const;
-    void setVariable(const std::string& variableName, double value);
+    // Getter methods
+    const std::string& getCity() const { return city; }
+    double getTemperature() const { return temperature; }
+    double getWindSpeed() const { return windSpeed; }
+
+    // Setter methods
+    void setTemperature(double temperature) { this->temperature = temperature; }
+    void setWindSpeed(double windSpeed) { this->windSpeed = windSpeed; }
 
 private:
     std::string city;
-    std::unordered_map<std::string, double> variables; // Map to store variables
+    double temperature;
+    double windSpeed;
 };

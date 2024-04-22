@@ -1,12 +1,16 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "AirQualityData.h"
+#include "air_quality_data.h"
 
 class AirQualityDataManager {
 public:
     void addAirQualityData(const AirQualityData& airQualityData);
-    // Methods to remove, retrieve, and manage air quality data
-    // Methods to calculate European AQI
-};
+    void removeAirQualityData(const std::string& city);
+    const AirQualityData* getAirQualityData(const std::string& city) const;
+    double calculateEuropeanAQI(const AirQualityData& airQualityData) const;
+    // Additional methods for managing air quality data
 
+private:
+    std::vector<AirQualityData> airQualityDataList;
+};
